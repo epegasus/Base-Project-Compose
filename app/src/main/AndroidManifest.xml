@@ -41,7 +41,7 @@
         android:theme="@style/Theme.BaseProject"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.main.MainActivity"
+            android:name=".presentation.activity.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.App.Starting">
             <intent-filter>
@@ -62,7 +62,7 @@
 
         <!-- Playback Service -->
         <service
-            android:name="com.hypersoft.baseproject.presentation.mediaAudioDetails.player.PlaybackService"
+            android:name="com.hypersoft.baseproject.presentation.screens.mediaAudioDetails.player.PlaybackService"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="mediaPlayback">
