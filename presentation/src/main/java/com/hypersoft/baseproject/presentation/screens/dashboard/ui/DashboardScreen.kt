@@ -34,7 +34,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.hypersoft.baseproject.core.extensions.showToast
-import com.hypersoft.baseproject.presentation.navigations.routes.Route
 import com.hypersoft.baseproject.presentation.screens.dashboard.effect.DashboardEffect
 import com.hypersoft.baseproject.presentation.screens.dashboard.intent.DashboardIntent
 import com.hypersoft.baseproject.presentation.screens.dashboard.viewModel.DashboardViewModel
@@ -45,9 +44,9 @@ import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.compose.koinViewModel
 
 sealed class DashboardDest(val route: String, val title: String, val icon: ImageVector) {
-    data object Home : DashboardDest(Route.Home.route, "Home", Icons.Default.Home)
-    data object History : DashboardDest(Route.History.route, "History", Icons.Default.History)
-    data object Settings : DashboardDest(Route.Settings.route, "Settings", Icons.Default.Settings)
+    data object Home : DashboardDest("home", "Home", Icons.Default.Home)
+    data object History : DashboardDest("history", "History", Icons.Default.History)
+    data object Settings : DashboardDest("settings", "Settings", Icons.Default.Settings)
 }
 
 val dashboardDestinations = listOf(
@@ -69,9 +68,7 @@ fun DashboardScreen(
     LaunchedEffect(Unit) {
         viewModel.effect.collectLatest { effect ->
             when (effect) {
-                is DashboardEffect.RegisterBackPress -> { /* BackHandler handles back */
-                }
-
+                is DashboardEffect.RegisterBackPress -> onShowExitDialog()
                 is DashboardEffect.ShowError -> context.showToast(effect.message)
             }
         }
@@ -86,7 +83,7 @@ fun DashboardScreen(
     val currentDestination = navBackStackEntry?.destination
 
     BackHandler {
-        if (currentDestination?.route == Route.Home.route) {
+        if (currentDestination?.route == DashboardDest.Home.route) {
             showExitDialog = true
         } else {
             dashboardNavController.popBackStack()
@@ -146,18 +143,18 @@ fun DashboardScreen(
     ) { paddingValues ->
         NavHost(
             navController = dashboardNavController,
-            startDestination = Route.Home.route,
+            startDestination = DashboardDest.Home.route,
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
         ) {
-            composable(Route.Home.route) {
+            composable(DashboardDest.Home.route) {
                 HomeScreen()
             }
-            composable(Route.History.route) {
+            composable(DashboardDest.History.route) {
                 HistoryScreen()
             }
-            composable(Route.Settings.route) {
+            composable(DashboardDest.Settings.route) {
                 SettingsScreen()
             }
         }

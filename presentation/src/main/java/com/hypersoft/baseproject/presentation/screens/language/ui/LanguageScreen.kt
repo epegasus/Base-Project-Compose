@@ -1,5 +1,7 @@
 package com.hypersoft.baseproject.presentation.screens.language.ui
 
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -8,6 +10,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
@@ -67,7 +70,6 @@ fun LanguageScreen(
                 Text(
                     text = stringResource(coreR.string.choose_your_language),
                     style = MaterialTheme.typography.titleMedium,
-                    modifier = Modifier.weight(1f)
                 )
                 Button(onClick = { viewModel.handleIntent(LanguageIntent.ApplyLanguage) }) {
                     Text(stringResource(coreR.string._continue))
@@ -111,6 +113,7 @@ private fun LanguageItem(
         modifier = Modifier
             .fillMaxWidth()
             .clickable(onClick = onClick),
+
         colors = CardDefaults.cardColors(
             containerColor = if (language.isSelected) {
                 MaterialTheme.colorScheme.primaryContainer
@@ -119,7 +122,7 @@ private fun LanguageItem(
             }
         ),
         border = if (language.isSelected) {
-            androidx.compose.foundation.BorderStroke(
+            BorderStroke(
                 1.dp,
                 MaterialTheme.colorScheme.primary
             )
@@ -129,13 +132,14 @@ private fun LanguageItem(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(16.dp),
+                .padding(vertical = 8.dp, horizontal = 16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            androidx.compose.foundation.Image(
+            Image(
                 painter = painterResource(language.flagIcon),
                 contentDescription = null,
                 modifier = Modifier
+                    .size(40.dp)
                     .padding(end = 16.dp)
             )
             Text(
@@ -145,7 +149,7 @@ private fun LanguageItem(
                     .weight(1f)
             )
             if (language.isSelected) {
-                androidx.compose.foundation.Image(
+                Image(
                     painter = painterResource(coreR.drawable.ic_language_done),
                     contentDescription = null
                 )
