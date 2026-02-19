@@ -18,10 +18,10 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.hypersoft.baseproject.presentation.mediaImageDetails.effect.MediaImageDetailEffect
-import com.hypersoft.baseproject.presentation.mediaImageDetails.intent.MediaImageDetailIntent
-import com.hypersoft.baseproject.presentation.mediaImageDetails.state.MediaImageDetailState
-import com.hypersoft.baseproject.presentation.mediaImageDetails.viewModel.MediaImageDetailViewModel
+import com.hypersoft.baseproject.presentation.screens.mediaImageDetails.effect.MediaImageDetailEffect
+import com.hypersoft.baseproject.presentation.screens.mediaImageDetails.intent.MediaImageDetailIntent
+import com.hypersoft.baseproject.presentation.screens.mediaImageDetails.state.MediaImageDetailState
+import com.hypersoft.baseproject.presentation.screens.mediaImageDetails.viewModel.MediaImageDetailViewModel
 import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.compose.koinViewModel
 import org.koin.core.parameter.parametersOf

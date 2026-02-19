@@ -21,26 +21,28 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.hypersoft.baseproject.core.R as coreR
 import com.hypersoft.baseproject.core.extensions.showToast
 import com.hypersoft.baseproject.data.dataSources.inAppMemory.languages.entities.Language
-import com.hypersoft.baseproject.presentation.language.effect.LanguageEffect
-import com.hypersoft.baseproject.presentation.language.intent.LanguageIntent
-import com.hypersoft.baseproject.presentation.language.state.LanguageState
-import com.hypersoft.baseproject.presentation.language.viewModel.LanguageViewModel
+import com.hypersoft.baseproject.presentation.screens.language.effect.LanguageEffect
+import com.hypersoft.baseproject.presentation.screens.language.intent.LanguageIntent
+import com.hypersoft.baseproject.presentation.screens.language.state.LanguageState
+import com.hypersoft.baseproject.presentation.screens.language.viewModel.LanguageViewModel
 import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.compose.koinViewModel
+import com.hypersoft.baseproject.core.R as coreR
 
 @Composable
 fun LanguageScreen(
+    onNavigateToDashboard: () -> Unit,
     viewModel: LanguageViewModel = koinViewModel()
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle(LanguageState())
-    val context = androidx.compose.ui.platform.LocalContext.current
+    val context = LocalContext.current
 
     LaunchedEffect(Unit) {
         viewModel.effect.collectLatest { effect ->
@@ -62,8 +64,8 @@ fun LanguageScreen(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-        Text(
-            text = stringResource(coreR.string.choose_your_language),
+                Text(
+                    text = stringResource(coreR.string.choose_your_language),
                     style = MaterialTheme.typography.titleMedium,
                     modifier = Modifier.weight(1f)
                 )
@@ -151,4 +153,3 @@ private fun LanguageItem(
         }
     }
 }
-

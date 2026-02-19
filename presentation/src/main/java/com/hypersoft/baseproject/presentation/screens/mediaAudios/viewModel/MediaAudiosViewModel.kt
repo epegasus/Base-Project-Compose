@@ -4,9 +4,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.hypersoft.baseproject.domain.media.useCases.GetAudiosUseCase
 import com.hypersoft.baseproject.domain.media.useCases.contentObserver.ObserveMediaChangesUseCase
-import com.hypersoft.baseproject.presentation.mediaAudios.effect.MediaAudiosEffect
-import com.hypersoft.baseproject.presentation.mediaAudios.intent.MediaAudiosIntent
-import com.hypersoft.baseproject.presentation.mediaAudios.state.MediaAudiosState
+import com.hypersoft.baseproject.presentation.screens.mediaAudios.effect.MediaAudiosEffect
+import com.hypersoft.baseproject.presentation.screens.mediaAudios.intent.MediaAudiosIntent
+import com.hypersoft.baseproject.presentation.screens.mediaAudios.state.MediaAudiosState
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow

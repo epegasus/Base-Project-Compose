@@ -31,10 +31,10 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.hypersoft.baseproject.core.extensions.showToast
 import com.hypersoft.baseproject.core.extensions.toTimeFormat
 import com.hypersoft.baseproject.domain.media.entities.VideoEntity
-import com.hypersoft.baseproject.presentation.mediaVideos.effect.MediaVideosEffect
-import com.hypersoft.baseproject.presentation.mediaVideos.intent.MediaVideosIntent
-import com.hypersoft.baseproject.presentation.mediaVideos.state.MediaVideosState
-import com.hypersoft.baseproject.presentation.mediaVideos.viewModel.MediaVideosViewModel
+import com.hypersoft.baseproject.presentation.screens.mediaVideos.effect.MediaVideosEffect
+import com.hypersoft.baseproject.presentation.screens.mediaVideos.intent.MediaVideosIntent
+import com.hypersoft.baseproject.presentation.screens.mediaVideos.state.MediaVideosState
+import com.hypersoft.baseproject.presentation.screens.mediaVideos.viewModel.MediaVideosViewModel
 import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.compose.koinViewModel
 
@@ -48,7 +48,7 @@ fun MediaVideosScreen(
     val context = LocalContext.current
 
     LaunchedEffect(Unit) {
-        viewModel.handleIntent(MediaVideosIntent.PermissionChanged(com.hypersoft.baseproject.presentation.mediaVideos.enums.MediaVideosPermissionLevel.Full))
+        viewModel.handleIntent(MediaVideosIntent.PermissionChanged(com.hypersoft.baseproject.presentation.screens.mediaVideos.enums.MediaVideosPermissionLevel.Full))
     }
 
     LaunchedEffect(Unit) {

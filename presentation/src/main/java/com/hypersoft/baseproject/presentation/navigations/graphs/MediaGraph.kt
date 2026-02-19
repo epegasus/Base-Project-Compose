@@ -39,9 +39,7 @@ fun NavGraphBuilder.mediaGraph(nav: NavHostController) {
         arguments = listOf(navArgument("audioUriPath") { type = NavType.StringType })
     ) {
         val uri = it.arguments?.getString("audioUriPath")!!
-        MediaAudioDetailScreen(uri, onBack = {}) {
-            nav.popBackStack()
-        }
+        MediaAudioDetailScreen(uri, onBack = { nav.popBackStack() })
     }
 
     composable(Route.MediaImages.route) {
@@ -58,9 +56,7 @@ fun NavGraphBuilder.mediaGraph(nav: NavHostController) {
         arguments = listOf(navArgument("imageUriPath") { type = NavType.StringType })
     ) {
         val uri = it.arguments?.getString("imageUriPath")!!
-        MediaImageDetailScreen(uri, onBack = {}) {
-            nav.popBackStack()
-        }
+        MediaImageDetailScreen(uri, onBack = { nav.popBackStack() })
     }
 
     composable(Route.MediaVideos.route) {
@@ -77,8 +73,6 @@ fun NavGraphBuilder.mediaGraph(nav: NavHostController) {
         arguments = listOf(navArgument("videoUriPath") { type = NavType.StringType })
     ) {
         val uri = it.arguments?.getString("videoUriPath")!!
-        MediaVideoDetailScreen(uri, onBack = {}) {
-            nav.popBackStack()
-        }
+        MediaVideoDetailScreen(uri, onBack = { nav.popBackStack() })
     }
 }

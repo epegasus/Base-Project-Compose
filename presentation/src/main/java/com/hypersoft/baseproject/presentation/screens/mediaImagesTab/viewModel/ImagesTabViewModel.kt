@@ -3,9 +3,9 @@ package com.hypersoft.baseproject.presentation.screens.mediaImagesTab.viewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.hypersoft.baseproject.domain.media.useCases.GetImagesUseCase
-import com.hypersoft.baseproject.presentation.mediaImagesTab.effect.ImagesTabEffect
-import com.hypersoft.baseproject.presentation.mediaImagesTab.intent.ImagesTabIntent
-import com.hypersoft.baseproject.presentation.mediaImagesTab.state.ImagesTabState
+import com.hypersoft.baseproject.presentation.screens.mediaImagesTab.effect.ImagesTabEffect
+import com.hypersoft.baseproject.presentation.screens.mediaImagesTab.intent.ImagesTabIntent
+import com.hypersoft.baseproject.presentation.screens.mediaImagesTab.state.ImagesTabState
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow

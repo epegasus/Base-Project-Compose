@@ -26,28 +26,28 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.navigation.NavController
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
-import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.hypersoft.baseproject.core.extensions.showToast
-import com.hypersoft.baseproject.presentation.dashboard.effect.DashboardEffect
-import com.hypersoft.baseproject.presentation.dashboard.intent.DashboardIntent
-import com.hypersoft.baseproject.presentation.dashboard.viewModel.DashboardViewModel
-import com.hypersoft.baseproject.presentation.history.ui.HistoryScreen
-import com.hypersoft.baseproject.presentation.home.ui.HomeScreen
-import com.hypersoft.baseproject.presentation.navigations.NavRoutes
-import com.hypersoft.baseproject.presentation.settings.ui.SettingsScreen
+import com.hypersoft.baseproject.presentation.navigations.routes.Route
+import com.hypersoft.baseproject.presentation.screens.dashboard.effect.DashboardEffect
+import com.hypersoft.baseproject.presentation.screens.dashboard.intent.DashboardIntent
+import com.hypersoft.baseproject.presentation.screens.dashboard.viewModel.DashboardViewModel
+import com.hypersoft.baseproject.presentation.screens.history.ui.HistoryScreen
+import com.hypersoft.baseproject.presentation.screens.home.ui.HomeScreen
+import com.hypersoft.baseproject.presentation.screens.settings.ui.SettingsScreen
 import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.compose.koinViewModel
 
 sealed class DashboardDest(val route: String, val title: String, val icon: ImageVector) {
-    data object Home : DashboardDest(NavRoutes.HOME, "Home", Icons.Default.Home)
-    data object History : DashboardDest(NavRoutes.HISTORY, "History", Icons.Default.History)
-    data object Settings : DashboardDest(NavRoutes.SETTINGS, "Settings", Icons.Default.Settings)
+    data object Home : DashboardDest(Route.Home.route, "Home", Icons.Default.Home)
+    data object History : DashboardDest(Route.History.route, "History", Icons.Default.History)
+    data object Settings : DashboardDest(Route.Settings.route, "Settings", Icons.Default.Settings)
 }
 
 val dashboardDestinations = listOf(
@@ -58,7 +58,7 @@ val dashboardDestinations = listOf(
 
 @Composable
 fun DashboardScreen(
-    navController: NavHostController,
+    navController: NavController,
     onShowExitDialog: () -> Unit,
     viewModel: DashboardViewModel = koinViewModel()
 ) {
@@ -69,7 +69,9 @@ fun DashboardScreen(
     LaunchedEffect(Unit) {
         viewModel.effect.collectLatest { effect ->
             when (effect) {
-                is DashboardEffect.RegisterBackPress -> { /* BackHandler handles back */ }
+                is DashboardEffect.RegisterBackPress -> { /* BackHandler handles back */
+                }
+
                 is DashboardEffect.ShowError -> context.showToast(effect.message)
             }
         }
@@ -84,7 +86,7 @@ fun DashboardScreen(
     val currentDestination = navBackStackEntry?.destination
 
     BackHandler {
-        if (currentDestination?.route == NavRoutes.HOME) {
+        if (currentDestination?.route == Route.Home.route) {
             showExitDialog = true
         } else {
             dashboardNavController.popBackStack()
@@ -144,18 +146,18 @@ fun DashboardScreen(
     ) { paddingValues ->
         NavHost(
             navController = dashboardNavController,
-            startDestination = NavRoutes.HOME,
+            startDestination = Route.Home.route,
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
         ) {
-            composable(NavRoutes.HOME) {
+            composable(Route.Home.route) {
                 HomeScreen()
             }
-            composable(NavRoutes.HISTORY) {
+            composable(Route.History.route) {
                 HistoryScreen()
             }
-            composable(NavRoutes.SETTINGS) {
+            composable(Route.Settings.route) {
                 SettingsScreen()
             }
         }

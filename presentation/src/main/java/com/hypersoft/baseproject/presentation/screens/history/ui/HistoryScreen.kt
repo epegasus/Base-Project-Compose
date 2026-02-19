@@ -18,9 +18,9 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.hypersoft.baseproject.core.R as coreR
 import com.hypersoft.baseproject.core.extensions.showToast
-import com.hypersoft.baseproject.presentation.history.effect.HistoryEffect
-import com.hypersoft.baseproject.presentation.history.state.HistoryState
-import com.hypersoft.baseproject.presentation.history.viewModel.HistoryViewModel
+import com.hypersoft.baseproject.presentation.screens.history.effect.HistoryEffect
+import com.hypersoft.baseproject.presentation.screens.history.state.HistoryState
+import com.hypersoft.baseproject.presentation.screens.history.viewModel.HistoryViewModel
 import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.compose.koinViewModel
 

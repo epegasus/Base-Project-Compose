@@ -1,6 +1,6 @@
 package com.hypersoft.baseproject.presentation.screens.language.di
 
-import com.hypersoft.baseproject.presentation.language.viewModel.LanguageViewModel
+import com.hypersoft.baseproject.presentation.screens.language.viewModel.LanguageViewModel
 import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.lazyModule
 

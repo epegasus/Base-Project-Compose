@@ -2,9 +2,9 @@ package com.hypersoft.baseproject.presentation.screens.mediaImageDetails.viewMod
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.hypersoft.baseproject.presentation.mediaImageDetails.effect.MediaImageDetailEffect
-import com.hypersoft.baseproject.presentation.mediaImageDetails.intent.MediaImageDetailIntent
-import com.hypersoft.baseproject.presentation.mediaImageDetails.state.MediaImageDetailState
+import com.hypersoft.baseproject.presentation.screens.mediaImageDetails.effect.MediaImageDetailEffect
+import com.hypersoft.baseproject.presentation.screens.mediaImageDetails.intent.MediaImageDetailIntent
+import com.hypersoft.baseproject.presentation.screens.mediaImageDetails.state.MediaImageDetailState
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow

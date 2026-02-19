@@ -17,6 +17,10 @@ sealed class Route(val route: String) {
     object MediaImages : Route("media_images")
     object MediaVideos : Route("media_videos")
 
+    object Home: Route("home")
+    object History: Route("history")
+    object Settings: Route("settings")
+
     object MediaAudioDetail : Route("media_audio_detail/{audioUriPath}") {
         fun create(audioUriPath: String) = "media_audio_detail/$audioUriPath"
     }

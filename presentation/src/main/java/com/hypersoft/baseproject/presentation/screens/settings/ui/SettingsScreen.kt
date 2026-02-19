@@ -23,10 +23,10 @@ import com.hypersoft.baseproject.core.extensions.openPlayStoreApp
 import com.hypersoft.baseproject.core.extensions.openWebUrl
 import com.hypersoft.baseproject.core.extensions.shareApp
 import com.hypersoft.baseproject.core.extensions.showToast
-import com.hypersoft.baseproject.presentation.settings.effect.SettingsEffect
-import com.hypersoft.baseproject.presentation.settings.intent.SettingsIntent
-import com.hypersoft.baseproject.presentation.settings.state.SettingsState
-import com.hypersoft.baseproject.presentation.settings.viewModel.SettingsViewModel
+import com.hypersoft.baseproject.presentation.screens.settings.effect.SettingsEffect
+import com.hypersoft.baseproject.presentation.screens.settings.intent.SettingsIntent
+import com.hypersoft.baseproject.presentation.screens.settings.state.SettingsState
+import com.hypersoft.baseproject.presentation.screens.settings.viewModel.SettingsViewModel
 import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.compose.koinViewModel
 

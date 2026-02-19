@@ -14,9 +14,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.hypersoft.baseproject.core.extensions.showToast
-import com.hypersoft.baseproject.presentation.entrance.effect.EntranceEffect
-import com.hypersoft.baseproject.presentation.entrance.state.EntranceState
-import com.hypersoft.baseproject.presentation.entrance.viewModel.EntranceViewModel
+import com.hypersoft.baseproject.presentation.screens.entrance.effect.EntranceEffect
+import com.hypersoft.baseproject.presentation.screens.entrance.state.EntranceState
+import com.hypersoft.baseproject.presentation.screens.entrance.viewModel.EntranceViewModel
 import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.compose.koinViewModel
 

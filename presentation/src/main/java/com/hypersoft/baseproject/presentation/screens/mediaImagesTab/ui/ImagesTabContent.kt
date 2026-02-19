@@ -23,10 +23,10 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.hypersoft.baseproject.core.extensions.showToast
 import com.hypersoft.baseproject.domain.media.entities.ImageEntity
-import com.hypersoft.baseproject.presentation.mediaImagesTab.effect.ImagesTabEffect
-import com.hypersoft.baseproject.presentation.mediaImagesTab.intent.ImagesTabIntent
-import com.hypersoft.baseproject.presentation.mediaImagesTab.state.ImagesTabState
-import com.hypersoft.baseproject.presentation.mediaImagesTab.viewModel.ImagesTabViewModel
+import com.hypersoft.baseproject.presentation.screens.mediaImagesTab.effect.ImagesTabEffect
+import com.hypersoft.baseproject.presentation.screens.mediaImagesTab.intent.ImagesTabIntent
+import com.hypersoft.baseproject.presentation.screens.mediaImagesTab.state.ImagesTabState
+import com.hypersoft.baseproject.presentation.screens.mediaImagesTab.viewModel.ImagesTabViewModel
 import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.compose.koinViewModel
 import org.koin.core.parameter.parametersOf

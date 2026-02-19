@@ -4,10 +4,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.hypersoft.baseproject.domain.media.useCases.GetVideosUseCase
 import com.hypersoft.baseproject.domain.media.useCases.contentObserver.ObserveMediaChangesUseCase
-import com.hypersoft.baseproject.presentation.mediaVideos.effect.MediaVideosEffect
-import com.hypersoft.baseproject.presentation.mediaVideos.enums.MediaVideosPermissionLevel
-import com.hypersoft.baseproject.presentation.mediaVideos.intent.MediaVideosIntent
-import com.hypersoft.baseproject.presentation.mediaVideos.state.MediaVideosState
+import com.hypersoft.baseproject.presentation.screens.mediaVideos.effect.MediaVideosEffect
+import com.hypersoft.baseproject.presentation.screens.mediaVideos.enums.MediaVideosPermissionLevel
+import com.hypersoft.baseproject.presentation.screens.mediaVideos.intent.MediaVideosIntent
+import com.hypersoft.baseproject.presentation.screens.mediaVideos.state.MediaVideosState
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow

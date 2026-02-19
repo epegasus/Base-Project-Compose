@@ -3,9 +3,9 @@ package com.hypersoft.baseproject.presentation.screens.inAppLanguage.viewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.hypersoft.baseproject.data.repositories.language.LanguageRepository
-import com.hypersoft.baseproject.presentation.inAppLanguage.effect.InAppLanguageEffect
-import com.hypersoft.baseproject.presentation.inAppLanguage.intent.InAppLanguageIntent
-import com.hypersoft.baseproject.presentation.inAppLanguage.state.InAppLanguageState
+import com.hypersoft.baseproject.presentation.screens.inAppLanguage.effect.InAppLanguageEffect
+import com.hypersoft.baseproject.presentation.screens.inAppLanguage.intent.InAppLanguageIntent
+import com.hypersoft.baseproject.presentation.screens.inAppLanguage.state.InAppLanguageState
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers

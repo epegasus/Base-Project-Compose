@@ -2,9 +2,9 @@ package com.hypersoft.baseproject.presentation.screens.home.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.hypersoft.baseproject.presentation.home.effect.HomeEffect
-import com.hypersoft.baseproject.presentation.home.intent.HomeIntent
-import com.hypersoft.baseproject.presentation.home.state.HomeState
+import com.hypersoft.baseproject.presentation.screens.home.effect.HomeEffect
+import com.hypersoft.baseproject.presentation.screens.home.intent.HomeIntent
+import com.hypersoft.baseproject.presentation.screens.home.state.HomeState
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow

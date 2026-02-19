@@ -3,10 +3,10 @@ package com.hypersoft.baseproject.presentation.screens.mediaAudioDetails.viewMod
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.hypersoft.baseproject.domain.media.useCases.GetAudiosUseCase
-import com.hypersoft.baseproject.presentation.mediaAudioDetails.effect.MediaAudioDetailEffect
-import com.hypersoft.baseproject.presentation.mediaAudioDetails.intent.MediaAudioDetailIntent
-import com.hypersoft.baseproject.presentation.mediaAudioDetails.intent.PlayerSnapshot
-import com.hypersoft.baseproject.presentation.mediaAudioDetails.state.MediaAudioDetailState
+import com.hypersoft.baseproject.presentation.screens.mediaAudioDetails.effect.MediaAudioDetailEffect
+import com.hypersoft.baseproject.presentation.screens.mediaAudioDetails.intent.MediaAudioDetailIntent
+import com.hypersoft.baseproject.presentation.screens.mediaAudioDetails.intent.PlayerSnapshot
+import com.hypersoft.baseproject.presentation.screens.mediaAudioDetails.state.MediaAudioDetailState
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow

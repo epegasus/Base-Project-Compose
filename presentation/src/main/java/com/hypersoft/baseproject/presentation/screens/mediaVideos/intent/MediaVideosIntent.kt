@@ -1,6 +1,6 @@
 package com.hypersoft.baseproject.presentation.screens.mediaVideos.intent
 
-import com.hypersoft.baseproject.presentation.mediaVideos.enums.MediaVideosPermissionLevel
+import com.hypersoft.baseproject.presentation.screens.mediaVideos.enums.MediaVideosPermissionLevel
 
 sealed class MediaVideosIntent {
     object NavigationBack : MediaVideosIntent()

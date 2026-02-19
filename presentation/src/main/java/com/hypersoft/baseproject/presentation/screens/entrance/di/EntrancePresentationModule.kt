@@ -1,6 +1,6 @@
 package com.hypersoft.baseproject.presentation.screens.entrance.di
 
-import com.hypersoft.baseproject.presentation.entrance.viewModel.EntranceViewModel
+import com.hypersoft.baseproject.presentation.screens.entrance.viewModel.EntranceViewModel
 import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.lazyModule
 

@@ -6,10 +6,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.hypersoft.baseproject.domain.media.entities.VideoEntity
 import com.hypersoft.baseproject.domain.media.useCases.GetVideosUseCase
-import com.hypersoft.baseproject.presentation.mediaVideoDetails.effect.MediaVideoDetailEffect
-import com.hypersoft.baseproject.presentation.mediaVideoDetails.factory.MediaPlayerFactory
-import com.hypersoft.baseproject.presentation.mediaVideoDetails.intent.MediaVideoDetailIntent
-import com.hypersoft.baseproject.presentation.mediaVideoDetails.state.MediaVideoDetailState
+import com.hypersoft.baseproject.presentation.screens.mediaVideoDetails.effect.MediaVideoDetailEffect
+import com.hypersoft.baseproject.presentation.screens.mediaVideoDetails.factory.MediaPlayerFactory
+import com.hypersoft.baseproject.presentation.screens.mediaVideoDetails.intent.MediaVideoDetailIntent
+import com.hypersoft.baseproject.presentation.screens.mediaVideoDetails.state.MediaVideoDetailState
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay

@@ -31,10 +31,10 @@ import com.hypersoft.baseproject.core.R
 import com.hypersoft.baseproject.core.extensions.showToast
 import com.hypersoft.baseproject.core.extensions.toTimeFormat
 import com.hypersoft.baseproject.domain.media.entities.AudioEntity
-import com.hypersoft.baseproject.presentation.mediaAudios.effect.MediaAudiosEffect
-import com.hypersoft.baseproject.presentation.mediaAudios.intent.MediaAudiosIntent
-import com.hypersoft.baseproject.presentation.mediaAudios.state.MediaAudiosState
-import com.hypersoft.baseproject.presentation.mediaAudios.viewModel.MediaAudiosViewModel
+import com.hypersoft.baseproject.presentation.screens.mediaAudios.effect.MediaAudiosEffect
+import com.hypersoft.baseproject.presentation.screens.mediaAudios.intent.MediaAudiosIntent
+import com.hypersoft.baseproject.presentation.screens.mediaAudios.state.MediaAudiosState
+import com.hypersoft.baseproject.presentation.screens.mediaAudios.viewModel.MediaAudiosViewModel
 import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.compose.koinViewModel
 

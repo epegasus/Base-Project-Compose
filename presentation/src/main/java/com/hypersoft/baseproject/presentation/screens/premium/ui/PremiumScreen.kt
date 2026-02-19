@@ -14,9 +14,9 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.hypersoft.baseproject.presentation.premium.effect.PremiumEffect
-import com.hypersoft.baseproject.presentation.premium.intent.PremiumIntent
-import com.hypersoft.baseproject.presentation.premium.viewModel.PremiumViewModel
+import com.hypersoft.baseproject.presentation.screens.premium.effect.PremiumEffect
+import com.hypersoft.baseproject.presentation.screens.premium.intent.PremiumIntent
+import com.hypersoft.baseproject.presentation.screens.premium.viewModel.PremiumViewModel
 import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.compose.koinViewModel
 

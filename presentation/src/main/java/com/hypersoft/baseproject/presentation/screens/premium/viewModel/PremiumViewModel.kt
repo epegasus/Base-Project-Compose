@@ -2,9 +2,9 @@ package com.hypersoft.baseproject.presentation.screens.premium.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.hypersoft.baseproject.presentation.premium.effect.PremiumEffect
-import com.hypersoft.baseproject.presentation.premium.intent.PremiumIntent
-import com.hypersoft.baseproject.presentation.premium.state.PremiumState
+import com.hypersoft.baseproject.presentation.screens.premium.effect.PremiumEffect
+import com.hypersoft.baseproject.presentation.screens.premium.intent.PremiumIntent
+import com.hypersoft.baseproject.presentation.screens.premium.state.PremiumState
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow

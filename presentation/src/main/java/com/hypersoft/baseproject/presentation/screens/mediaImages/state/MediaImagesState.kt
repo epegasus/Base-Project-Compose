@@ -1,7 +1,7 @@
 package com.hypersoft.baseproject.presentation.screens.mediaImages.state
 
 import com.hypersoft.baseproject.domain.media.entities.ImageFolderEntity
-import com.hypersoft.baseproject.presentation.mediaImages.enums.MediaImagesPermissionLevel
+import com.hypersoft.baseproject.presentation.screens.mediaImages.enums.MediaImagesPermissionLevel
 
 data class MediaImagesState(
     val isLoading: Boolean = false,

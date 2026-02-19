@@ -1,7 +1,7 @@
 package com.hypersoft.baseproject.presentation.screens.mediaImagesTab.di
 
 import com.hypersoft.baseproject.domain.media.useCases.GetImagesUseCase
-import com.hypersoft.baseproject.presentation.mediaImagesTab.viewModel.ImagesTabViewModel
+import com.hypersoft.baseproject.presentation.screens.mediaImagesTab.viewModel.ImagesTabViewModel
 import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.lazyModule
 

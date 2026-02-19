@@ -3,9 +3,9 @@ package com.hypersoft.baseproject.presentation.screens.settings.viewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.hypersoft.baseproject.core.info.AppInfoProvider
-import com.hypersoft.baseproject.presentation.settings.effect.SettingsEffect
-import com.hypersoft.baseproject.presentation.settings.intent.SettingsIntent
-import com.hypersoft.baseproject.presentation.settings.state.SettingsState
+import com.hypersoft.baseproject.presentation.screens.settings.effect.SettingsEffect
+import com.hypersoft.baseproject.presentation.screens.settings.intent.SettingsIntent
+import com.hypersoft.baseproject.presentation.screens.settings.state.SettingsState
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow

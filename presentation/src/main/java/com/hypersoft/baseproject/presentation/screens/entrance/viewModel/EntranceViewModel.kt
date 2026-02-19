@@ -3,9 +3,9 @@ package com.hypersoft.baseproject.presentation.screens.entrance.viewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.hypersoft.baseproject.data.repositories.entrance.EntranceRepository
-import com.hypersoft.baseproject.presentation.entrance.effect.EntranceEffect
-import com.hypersoft.baseproject.presentation.entrance.intent.EntranceIntent
-import com.hypersoft.baseproject.presentation.entrance.state.EntranceState
+import com.hypersoft.baseproject.presentation.screens.entrance.effect.EntranceEffect
+import com.hypersoft.baseproject.presentation.screens.entrance.intent.EntranceIntent
+import com.hypersoft.baseproject.presentation.screens.entrance.state.EntranceState
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow

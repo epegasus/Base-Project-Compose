@@ -4,10 +4,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.hypersoft.baseproject.domain.media.useCases.GetImageFoldersUseCase
 import com.hypersoft.baseproject.domain.media.useCases.contentObserver.ObserveMediaChangesUseCase
-import com.hypersoft.baseproject.presentation.mediaImages.effect.MediaImagesEffect
-import com.hypersoft.baseproject.presentation.mediaImages.enums.MediaImagesPermissionLevel
-import com.hypersoft.baseproject.presentation.mediaImages.intent.MediaImagesIntent
-import com.hypersoft.baseproject.presentation.mediaImages.state.MediaImagesState
+import com.hypersoft.baseproject.presentation.screens.mediaImages.effect.MediaImagesEffect
+import com.hypersoft.baseproject.presentation.screens.mediaImages.enums.MediaImagesPermissionLevel
+import com.hypersoft.baseproject.presentation.screens.mediaImages.intent.MediaImagesIntent
+import com.hypersoft.baseproject.presentation.screens.mediaImages.state.MediaImagesState
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow

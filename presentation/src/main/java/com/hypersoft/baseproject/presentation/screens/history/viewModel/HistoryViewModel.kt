@@ -3,9 +3,9 @@ package com.hypersoft.baseproject.presentation.screens.history.viewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.hypersoft.baseproject.data.repositories.history.HistoryRepository
-import com.hypersoft.baseproject.presentation.history.effect.HistoryEffect
-import com.hypersoft.baseproject.presentation.history.intent.HistoryIntent
-import com.hypersoft.baseproject.presentation.history.state.HistoryState
+import com.hypersoft.baseproject.presentation.screens.history.effect.HistoryEffect
+import com.hypersoft.baseproject.presentation.screens.history.intent.HistoryIntent
+import com.hypersoft.baseproject.presentation.screens.history.state.HistoryState
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow

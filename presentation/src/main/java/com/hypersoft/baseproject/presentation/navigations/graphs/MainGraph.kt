@@ -1,7 +1,7 @@
 package com.hypersoft.baseproject.presentation.navigations.graphs
 
+import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
-import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import com.hypersoft.baseproject.presentation.navigations.routes.Route
 import com.hypersoft.baseproject.presentation.screens.dashboard.ui.DashboardScreen
@@ -11,36 +11,37 @@ import com.hypersoft.baseproject.presentation.screens.inAppLanguage.ui.InAppLang
 import com.hypersoft.baseproject.presentation.screens.language.ui.LanguageScreen
 import com.hypersoft.baseproject.presentation.screens.premium.ui.PremiumScreen
 
-fun NavGraphBuilder.mainGraph(nav: NavHostController) {
+fun NavGraphBuilder.mainGraph(navController: NavController) {
 
     composable(Route.Entrance.route) {
         EntranceScreen(
-            onNavigateToLanguage = { nav.navigate(Route.Language.route) },
-            onNavigateToDashboard = { nav.navigate(Route.Dashboard.route) }
+            onNavigateToLanguage = { navController.navigate(Route.Language.route) },
+            onNavigateToDashboard = { navController.navigate(Route.Dashboard.route) }
         )
     }
 
     composable(Route.Language.route) {
-        LanguageScreen { nav.navigate(Route.Dashboard.route) }
+        LanguageScreen(onNavigateToDashboard = {
+            navController.navigate(Route.Dashboard.route)
+        })
     }
 
     composable(Route.Dashboard.route) {
         DashboardScreen(
-            navController = nav,
-            onShowExitDialog = {},
-            viewModel = {}
+            navController = navController,
+            onShowExitDialog = {}
         )
     }
 
     composable(Route.Drawer.route) {
-        DrawerScreen(onBack = { nav.popBackStack() })
+        DrawerScreen(onBack = { navController.popBackStack() })
     }
 
     composable(Route.Premium.route) {
-        PremiumScreen(onBack = { nav.popBackStack() })
+        PremiumScreen(onBack = { navController.popBackStack() })
     }
 
     composable(Route.InAppLanguage.route) {
-        InAppLanguageScreen(onBack = { nav.popBackStack() })
+        InAppLanguageScreen(onBack = { navController.popBackStack() })
     }
 }

@@ -1,6 +1,6 @@
 package com.hypersoft.baseproject.presentation.screens.home.di
 
-import com.hypersoft.baseproject.presentation.home.viewModel.HomeViewModel
+import com.hypersoft.baseproject.presentation.screens.home.viewModel.HomeViewModel
 import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.lazyModule
 

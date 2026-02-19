@@ -2,9 +2,9 @@ package com.hypersoft.baseproject.presentation.screens.media.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.hypersoft.baseproject.presentation.media.effect.MediaEffect
-import com.hypersoft.baseproject.presentation.media.intent.MediaIntent
-import com.hypersoft.baseproject.presentation.media.state.MediaState
+import com.hypersoft.baseproject.presentation.screens.media.effect.MediaEffect
+import com.hypersoft.baseproject.presentation.screens.media.intent.MediaIntent
+import com.hypersoft.baseproject.presentation.screens.media.state.MediaState
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow

@@ -27,10 +27,10 @@ import androidx.core.content.ContextCompat
 import com.hypersoft.baseproject.core.permission.enums.MediaPermission
 import com.hypersoft.baseproject.core.permission.permissionStrings
 import com.hypersoft.baseproject.presentation.R
-import com.hypersoft.baseproject.presentation.media.effect.MediaEffect
-import com.hypersoft.baseproject.presentation.media.intent.MediaIntent
-import com.hypersoft.baseproject.presentation.media.state.MediaState
-import com.hypersoft.baseproject.presentation.media.viewModel.MediaViewModel
+import com.hypersoft.baseproject.presentation.screens.media.effect.MediaEffect
+import com.hypersoft.baseproject.presentation.screens.media.intent.MediaIntent
+import com.hypersoft.baseproject.presentation.screens.media.state.MediaState
+import com.hypersoft.baseproject.presentation.screens.media.viewModel.MediaViewModel
 import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.compose.koinViewModel
 

@@ -34,10 +34,10 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.hypersoft.baseproject.core.R as coreR
 import com.hypersoft.baseproject.core.extensions.showToast
 import com.hypersoft.baseproject.data.dataSources.inAppMemory.languages.entities.Language
-import com.hypersoft.baseproject.presentation.inAppLanguage.effect.InAppLanguageEffect
-import com.hypersoft.baseproject.presentation.inAppLanguage.intent.InAppLanguageIntent
-import com.hypersoft.baseproject.presentation.inAppLanguage.state.InAppLanguageState
-import com.hypersoft.baseproject.presentation.inAppLanguage.viewModel.InAppLanguageViewModel
+import com.hypersoft.baseproject.presentation.screens.inAppLanguage.effect.InAppLanguageEffect
+import com.hypersoft.baseproject.presentation.screens.inAppLanguage.intent.InAppLanguageIntent
+import com.hypersoft.baseproject.presentation.screens.inAppLanguage.state.InAppLanguageState
+import com.hypersoft.baseproject.presentation.screens.inAppLanguage.viewModel.InAppLanguageViewModel
 import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.compose.koinViewModel
 

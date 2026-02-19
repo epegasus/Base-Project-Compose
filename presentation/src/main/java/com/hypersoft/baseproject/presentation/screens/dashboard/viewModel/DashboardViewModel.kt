@@ -2,9 +2,9 @@ package com.hypersoft.baseproject.presentation.screens.dashboard.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.hypersoft.baseproject.presentation.dashboard.effect.DashboardEffect
-import com.hypersoft.baseproject.presentation.dashboard.intent.DashboardIntent
-import com.hypersoft.baseproject.presentation.dashboard.state.DashboardState
+import com.hypersoft.baseproject.presentation.screens.dashboard.effect.DashboardEffect
+import com.hypersoft.baseproject.presentation.screens.dashboard.intent.DashboardIntent
+import com.hypersoft.baseproject.presentation.screens.dashboard.state.DashboardState
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow

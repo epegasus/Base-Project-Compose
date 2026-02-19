@@ -25,10 +25,10 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.hypersoft.baseproject.core.di.DIComponent
 import com.hypersoft.baseproject.presentation.R
-import com.hypersoft.baseproject.presentation.home.effect.HomeEffect
-import com.hypersoft.baseproject.presentation.home.intent.HomeIntent
-import com.hypersoft.baseproject.presentation.home.state.HomeState
-import com.hypersoft.baseproject.presentation.home.viewModel.HomeViewModel
+import com.hypersoft.baseproject.presentation.screens.home.effect.HomeEffect
+import com.hypersoft.baseproject.presentation.screens.home.intent.HomeIntent
+import com.hypersoft.baseproject.presentation.screens.home.state.HomeState
+import com.hypersoft.baseproject.presentation.screens.home.viewModel.HomeViewModel
 import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.compose.koinViewModel
 

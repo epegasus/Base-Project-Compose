@@ -28,11 +28,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.hypersoft.baseproject.core.extensions.showToast
-import com.hypersoft.baseproject.presentation.mediaImages.effect.MediaImagesEffect
-import com.hypersoft.baseproject.presentation.mediaImages.intent.MediaImagesIntent
-import com.hypersoft.baseproject.presentation.mediaImages.state.MediaImagesState
-import com.hypersoft.baseproject.presentation.mediaImages.viewModel.MediaImagesViewModel
-import com.hypersoft.baseproject.presentation.mediaImagesTab.ui.ImagesTabContent
+import com.hypersoft.baseproject.presentation.screens.mediaImages.effect.MediaImagesEffect
+import com.hypersoft.baseproject.presentation.screens.mediaImages.intent.MediaImagesIntent
+import com.hypersoft.baseproject.presentation.screens.mediaImages.state.MediaImagesState
+import com.hypersoft.baseproject.presentation.screens.mediaImages.viewModel.MediaImagesViewModel
+import com.hypersoft.baseproject.presentation.screens.mediaImagesTab.ui.ImagesTabContent
 import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.compose.koinViewModel
 
@@ -48,7 +48,7 @@ fun MediaImagesScreen(
     var selectedTab by remember { mutableIntStateOf(0) }
 
     LaunchedEffect(Unit) {
-        viewModel.handleIntent(MediaImagesIntent.PermissionChanged(com.hypersoft.baseproject.presentation.mediaImages.enums.MediaImagesPermissionLevel.Full))
+        viewModel.handleIntent(MediaImagesIntent.PermissionChanged(com.hypersoft.baseproject.presentation.screens.mediaImages.enums.MediaImagesPermissionLevel.Full))
     }
 
     LaunchedEffect(Unit) {

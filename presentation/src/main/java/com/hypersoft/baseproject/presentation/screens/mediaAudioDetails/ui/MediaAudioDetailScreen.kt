@@ -21,10 +21,10 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.hypersoft.baseproject.core.extensions.toTimeFormat
 import com.hypersoft.baseproject.core.extensions.showToast
-import com.hypersoft.baseproject.presentation.mediaAudioDetails.effect.MediaAudioDetailEffect
-import com.hypersoft.baseproject.presentation.mediaAudioDetails.intent.MediaAudioDetailIntent
-import com.hypersoft.baseproject.presentation.mediaAudioDetails.state.MediaAudioDetailState
-import com.hypersoft.baseproject.presentation.mediaAudioDetails.viewModel.MediaAudioDetailViewModel
+import com.hypersoft.baseproject.presentation.screens.mediaAudioDetails.effect.MediaAudioDetailEffect
+import com.hypersoft.baseproject.presentation.screens.mediaAudioDetails.intent.MediaAudioDetailIntent
+import com.hypersoft.baseproject.presentation.screens.mediaAudioDetails.state.MediaAudioDetailState
+import com.hypersoft.baseproject.presentation.screens.mediaAudioDetails.viewModel.MediaAudioDetailViewModel
 import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.compose.koinViewModel
 

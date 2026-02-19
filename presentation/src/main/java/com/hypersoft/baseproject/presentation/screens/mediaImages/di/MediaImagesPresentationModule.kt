@@ -1,6 +1,6 @@
 package com.hypersoft.baseproject.presentation.screens.mediaImages.di
 
-import com.hypersoft.baseproject.presentation.mediaImages.viewModel.MediaImagesViewModel
+import com.hypersoft.baseproject.presentation.screens.mediaImages.viewModel.MediaImagesViewModel
 import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.lazyModule
 
